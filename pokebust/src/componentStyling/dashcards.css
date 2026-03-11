@@ -1,0 +1,36 @@
+.dashcards {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2.5rem;
+	align-self: stretch;
+}
+
+.card-body {
+	width: 75rem;
+	height: 21.5625rem;
+}
+
+.dashCard {
+	max-width: 75rem;
+	height: 21.5625rem;
+
+	display: flex;
+	flex-direction: row;
+
+	border-radius: 1.25rem;
+	background: #202129;
+	/* background-image: url(../images/Charmander.svg); */
+	/* background-repeat: no-repeat; */
+	/* background-position: right center; */
+	box-shadow:
+		8px 0 0 4px #000 inset,
+		-8px 0 0 4px #000 inset,
+		0 4px 34px 5px #000;
+}
+
+.cardImage {
+	width: 100%;
+
+	background-image: url(../images/Charmander.svg);
+}

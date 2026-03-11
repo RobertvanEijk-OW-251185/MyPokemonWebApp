@@ -1,0 +1,94 @@
+.footer {
+	display: flex;
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
+	padding-left: 10rem;
+	padding-right: 10rem;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1.25rem;
+	align-self: stretch;
+
+	background: #111216;
+	box-shadow: 0 -4px 4px 2px rgba(0, 0, 0, 0.6);
+}
+
+.footerTitle {
+	color: #f0f8ff;
+	font-family: "Roboto Mono";
+	font-size: 2.25rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.footerContent {
+	display: flex;
+	/* flex-direction: column-reverse; */
+	justify-content: center;
+	align-items: center;
+	gap: 18.5625rem;
+}
+
+.footerNavigation {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1.25rem;
+}
+
+.footerNavTitle {
+	width: 17.625rem;
+
+	color: #f0f8ff;
+	text-align: center;
+	font-family: "Roboto Mono";
+	font-size: 2rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	text-decoration-line: underline;
+	text-decoration-style: solid;
+	text-decoration-skip-ink: auto;
+	text-decoration-thickness: auto;
+	text-underline-offset: auto;
+	text-underline-position: from-font;
+}
+
+.footerNavLinks {
+	color: #f0f8ff;
+	text-align: center;
+	font-family: "Roboto Mono";
+	font-size: 1.5rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.footerInfo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1.25rem;
+}
+
+.footerInfoContent {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1.25rem;
+}
+
+.footerFoot {
+	width: 65.98469rem;
+
+	color: #f0f8ff;
+	font-family: "Roboto Mono";
+	font-size: 1.25rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}

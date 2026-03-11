@@ -1,0 +1,79 @@
+.navbar {
+	display: flex;
+	width: 84vw;
+	min-width: 84vw;
+	/* height: 8.4vh; */
+	min-height: 8.4vh;
+	padding: 10px 40px;
+	justify-content: center;
+	align-items: center;
+	gap: 200px;
+	/* margin-left: auto; */
+	/* margin-right: auto; */
+	/* margin-top: 20px; */
+
+	color: aliceblue;
+	border-radius: 50px;
+	background: #111216;
+	box-shadow: 0 4px 4px 2px rgba(0, 0, 0, 0.6);
+}
+
+.navbar-brand {
+	display: flex;
+	flex-wrap: wrap;
+	width: 18.375rem;
+	/* padding: 0.625rem 0; */
+	justify-content: center;
+	align-items: center;
+	gap: 0.9375rem;
+}
+
+.navbarLogoImage {
+	width: 3.4375rem;
+	/* height: 3.4375rem; */
+	/* flex-shrink: 0; */
+	aspect-ratio: 1/1;
+
+	background: url(../images/PokebustLogo.svg) #111216 no-repeat;
+	/* background: url(../images/logo4.svg) no-repeat; */
+	background-size: contain;
+	/* border: 2px solid black !important; */
+	border-style: none !important;
+}
+
+.navbar-brand {
+	display: flex;
+	flex-direction: row;
+
+	/* color: #f1f1f1; */
+	text-align: center;
+	/* leading-trim: both;
+	text-edge: cap; */
+	font-family: "Press Start 2P";
+	font-size: 1.5rem;
+
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+
+	/* color: aliceblue; */
+}
+
+.nav-link:hover {
+	color: #e53800;
+}
+
+/* a.active {
+	margin-top: auto;
+	margin-bottom: auto;
+
+	text-decoration: underline 2px solid;
+
+	color: #e53800 !important;
+} */
+
+.active-link {
+	color: #e53800;
+
+	text-decoration: underline;
+}
