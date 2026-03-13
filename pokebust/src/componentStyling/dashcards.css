@@ -2,7 +2,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/* gap: 2.5rem; */
+	gap: 2.5rem;
 	align-self: stretch;
 
 	margin-bottom: 2.5rem;
@@ -15,11 +15,11 @@
 
 .card1,
 .card3 {
-	width: 62rem;
+	/* width: 62rem; */
 	/* width: fit-content; */
-	height: 20.5rem;
+	/* height: 20.5rem; */
 
-	display: flex;
+	/* display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: center;
@@ -27,51 +27,82 @@
 	border-radius: 1.25rem;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: cover;
+	background-size: cover; */
 
 	/* box-shadow:
 		8px 0 0 4px #000 inset,
 		-8px 0 0 4px #000 inset,
 		0 4px 34px 5px #000; */
+
+	display: flex;
+	/* padding-left: 34.43738rem; */
+	justify-content: flex-start;
+	align-items: center;
+
+	width: 1200px;
+	height: 345px;
+
+	border-radius: 1.25rem;
+	background: #202129;
+	box-shadow:
+		8px 0 0 4px #000 inset,
+		-8px 0 0 4px #000 inset,
+		0 4px 34px 5px #000;
 }
 
 .card1 {
-	background: url(../images/CharmanderCard.png);
+	/* background: url(../images/CharmanderCard.png); */
+	background: url(../images/dashCard1.png) lightgray 100% / cover no-repeat;
 }
 
 .card3 {
-	background: url(../images/SquirtleCard.png);
+	background: url(../images/dashCard3.png) lightgray 100% / cover no-repeat;
 }
 
 .card2,
 .card4 {
-	width: 62rem;
+	/* width: 62rem; */
 	/* width: fit-content; */
-	height: 20.5rem;
+	/* height: 20.5rem; */
 
-	display: flex;
+	/* display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
-	align-items: center;
+	align-items: center; */
 
-	border-radius: 1.25rem;
+	/* border-radius: 1.25rem; */
 	/* background: url(../images/CharmanderCard.png); */
-	background-repeat: no-repeat;
+	/* background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 
-	/* box-shadow:
+	box-shadow:
 		8px 0 0 4px #000 inset,
 		-8px 0 0 4px #000 inset,
 		0 4px 34px 5px #000; */
+
+	display: flex;
+	/* padding-left: 34.43738rem; */
+	justify-content: flex-end;
+	align-items: center;
+
+	width: 1200px;
+	height: 345px;
+
+	border-radius: 1.25rem;
+	background: #202129;
+	box-shadow:
+		8px 0 0 4px #000 inset,
+		-8px 0 0 4px #000 inset,
+		0 4px 34px 5px #000;
 }
 
 .card2 {
-	background: url(../images/PikachuCard.png);
+	background: url(../images/dashCard2.png) lightgray 100% / cover no-repeat;
 }
 
 .card4 {
-	background: url(../images/BulbasaurCard.png);
+	background: url(../images/dashCard4.png) lightgray 100% / cover no-repeat;
 }
 
 .cardInfo {
@@ -90,7 +121,7 @@
 	color: #fff;
 	text-align: center;
 	font-family: "Roboto Mono";
-	font-size: 2rem;
+	font-size: 1.8rem;
 	font-style: normal;
 	font-weight: 700;
 	line-height: normal;

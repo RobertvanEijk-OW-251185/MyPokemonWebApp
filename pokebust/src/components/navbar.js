@@ -17,7 +17,7 @@ function NavBar() {
 				<Container>
 					<Nav className="me-auto">
 						<Navbar.Brand class="navTitle" href="#home">
-							<img class="navbarLogoImage" />
+							<div class="navbarLogoImage" />
 							POKEBUST
 						</Navbar.Brand>
 					</Nav>

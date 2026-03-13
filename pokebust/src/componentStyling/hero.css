@@ -94,9 +94,14 @@ I had to restart the hero sections css :((*/
 
 .heroImage {
 	flex: 1 1 60%;
+	max-width: 20rem;
 	min-width: 280px;
+	/* width: 60rem; */
 	aspect-ratio: 54 / 73;
 	background: url(../images/ProfessorOak.png) center / cover no-repeat;
+	/* background: url(../images/ProfOak2.png) center / cover no-repeat; */
+	/* background: url(../images/Logo5.svg) center / cover no-repeat; */
+
 	background-color: transparent;
 }
 

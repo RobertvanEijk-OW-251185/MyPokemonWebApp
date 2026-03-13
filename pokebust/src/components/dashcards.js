@@ -19,7 +19,7 @@ function DashCards() {
 					<h1 class="cardTitle">Unsure of Your Pokemon Info??</h1>
 					<p class="cardBodyCopy">
 						Quickly search any Pokémon and get instant stats, types, Pokédex
-						info, and locations. Never guess again — just search and explore!
+						info, and locations. Never guess again, explore!
 					</p>
 					<button id="PikaButton">Search Now!</button>
 				</div>
