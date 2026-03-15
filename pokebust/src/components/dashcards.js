@@ -1,6 +1,8 @@
 // import Button from "react-bootstrap/Button";
 // import Card from "react-bootstrap/Card";
 
+import { Link, NavLink } from "react-router-dom";
+
 function DashCards() {
 	return (
 		<div class="dashCards">
@@ -21,7 +23,12 @@ function DashCards() {
 						Quickly search any Pokémon and get instant stats, types, Pokédex
 						info, and locations. Never guess again, explore!
 					</p>
-					<button id="PikaButton">Search Now!</button>
+					{/* <button id="PikaButton">Search Now!</button> */}
+					<button id="PikaButton">
+						<NavLink className="BlackText" to="/comparison">
+							Search Now!
+						</NavLink>
+					</button>
 				</div>
 			</div>
 			<div class="card3">
@@ -32,7 +39,12 @@ function DashCards() {
 						side-by-side bars, and type match-ups make it easy to decide who’s
 						stronger.
 					</p>
-					<button id="SquirtleButton">Compare Now!</button>
+					{/* <button id="SquirtleButton">Compare Now!</button> */}
+					<button id="SquirtleButton">
+						<NavLink className="WhiteText" to="/comparison">
+							Compare Now!
+						</NavLink>
+					</button>
 				</div>
 			</div>
 			<div class="card4">
@@ -42,7 +54,12 @@ function DashCards() {
 						Watch your Pokémon’s power grow level by level! Follow the timeline
 						of HP, Attack, Speed and more as it evolves and hits new peaks.
 					</p>
-					<button id="BulbaButton">View Timeline!</button>
+					{/* <button id="BulbaButton">View Timeline!</button> */}
+					<button id="BulbaButton">
+						<NavLink className="WhiteText" to="/timeline">
+							View Your Timeline!
+						</NavLink>
+					</button>
 				</div>
 			</div>
 		</div>

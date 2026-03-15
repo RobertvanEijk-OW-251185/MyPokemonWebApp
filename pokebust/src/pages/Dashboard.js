@@ -36,11 +36,25 @@ import HeroComponent from "../components/hero.js";
 import DashCards from "../components/dashcards.js";
 import FooterComponent from "../components/footer.js";
 
+import Comparison from "../pages/Comparison.js";
+
+import Timeline from "../pages/Timeline.js";
+
+import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
+
 function Dashboard() {
 	return (
 		<div>
 			<HeroComponent></HeroComponent>
 			<DashCards></DashCards>
+			{/* <BrowserRouter>
+				<FooterComponent></FooterComponent>
+				<Routes>
+					<Route path="/" element={<Dashboard />} />
+					<Route path="../pages/comparison" element={<Comparison />} />
+					<Route path="../pages/timeline" element={<Timeline />} />
+				</Routes>
+			</BrowserRouter> */}
 			<FooterComponent></FooterComponent>
 		</div>
 	);

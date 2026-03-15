@@ -14,8 +14,6 @@ function Comparison() {
 	return (
 		<div class="ComparisonPage">
 			<HeroComponentComparison></HeroComponentComparison>
-			{/* <PokiAPICall pokemonName="bulbasaur" />
-			<PokiAPICall pokemonName="pikachu" /> */}
 			<PokeGrid></PokeGrid>
 			<FooterComponent></FooterComponent>
 		</div>

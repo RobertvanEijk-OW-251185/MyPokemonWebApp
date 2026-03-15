@@ -1,3 +1,5 @@
+import { Link, NavLink } from "react-router-dom";
+
 function FooterComponent() {
 	return (
 		<div class="footer">
@@ -10,9 +12,33 @@ function FooterComponent() {
 						<h4>Navigation</h4>
 					</div>
 					<div class="footerNavLinks">
-						<p>Dashboard</p>
-						<p>Comparison</p>
-						<p>Timeline</p>
+						{/* <Link>Dashboard</Link> */}
+						{/* <Link>Comparison</Link> */}
+						{/* <Link>Timeline</Link> */}
+						{/* <p>Dashboard</p> */}
+						{/* <p>Comparison</p> */}
+						{/* <p>Timeline</p> */}
+						<NavLink
+							className={({ isActive }) =>
+								isActive ? "roboto-mono-nav" : "roboto-mono-nav"
+							}
+							to="/">
+							Dashboard
+						</NavLink>
+						<NavLink
+							className={({ isActive }) =>
+								isActive ? "roboto-mono-nav" : "roboto-mono-nav"
+							}
+							to="/comparison">
+							Comparison
+						</NavLink>
+						<NavLink
+							className={({ isActive }) =>
+								isActive ? "roboto-mono-nav" : "roboto-mono-nav"
+							}
+							to="/timeline">
+							Timeline
+						</NavLink>
 					</div>
 				</div>
 				<div class="footerInfo">

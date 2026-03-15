@@ -1,3 +1,7 @@
+:root {
+	--background: linear-gradient(180deg, #090a0c 0%, #1e1f27 100%) no-repeat;
+}
+
 body,
 .App {
 	display: flex;
@@ -11,12 +15,9 @@ body,
 	width: 100vw;
 	height: 100%;
 	background: var(--background);
+	/* background: #090a0c; */
 
 	color: aliceblue !important;
-}
-
-:root {
-	--background: linear-gradient(180deg, #090a0c 0%, #1e1f27 100%) no-repeat;
 }
 
 .press-start-2p-title {

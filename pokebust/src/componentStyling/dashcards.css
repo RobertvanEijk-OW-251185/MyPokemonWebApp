@@ -142,6 +142,18 @@
 	text-align: center;
 }
 
+.BlackText {
+	color: #000;
+
+	text-decoration: none;
+}
+
+.WhiteText {
+	color: aliceblue;
+
+	text-decoration: none;
+}
+
 #PikaButton {
 	display: flex;
 	width: auto;
