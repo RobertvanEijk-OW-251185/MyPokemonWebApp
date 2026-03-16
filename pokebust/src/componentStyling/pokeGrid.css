@@ -316,3 +316,12 @@
 	display: flex;
 	flex-wrap: wrap;
 }
+
+/* Chart Styling */
+
+.radarChartContainer,
+.barChartsContainer,
+.barChartsContainer,
+.pieChartContainer1,
+.pieChartContainer1 {
+}

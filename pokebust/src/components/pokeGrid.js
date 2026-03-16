@@ -154,8 +154,18 @@ function PokeGrid() {
 					) : null}
 				</div>
 
-				{/* Comparison Hex Chart */}
+				{/* Comparison Radar Chart */}
+
+				<div
+					className="radarChartContainer"
+					style={!pokeBallVisible ? { background: "flex" } : {}}></div>
+
 				{/* Comparison Horisontal Bars */}
+
+				<div
+					className="barChartsContainer"
+					style={!pokeBallVisible ? { background: "flex" } : {}}></div>
+
 				{/* Pokeball To see Which Pokemon is "Better" */}
 
 				<div
@@ -175,6 +185,10 @@ function PokeGrid() {
 				</div>
 
 				{/* Pie Cahrt Indicating Types for Pokemon 1 */}
+
+				<div
+					className="pieChartContainer1"
+					style={!pokeBallVisible ? { background: "flex" } : {}}></div>
 
 				{/* Pokeball 2 OR Sprite 2 */}
 				<div
@@ -205,6 +219,10 @@ function PokeGrid() {
 				</div>
 
 				{/* Pie Cahrt Indicating Types for Pokemon 2 */}
+
+				<div
+					className="pieChartContainer1"
+					style={!pokeBallVisible ? { background: "flex" } : {}}></div>
 			</div>
 		</div>
 	);
