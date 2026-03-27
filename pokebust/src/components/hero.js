@@ -4,9 +4,9 @@ function HeroComponent() {
 			<div class="heroGroup">
 				<div class="heroImage"></div>
 				<div class="heroText">
-					<h1 class="heroTitle">POKEBUST</h1>
+					<h1 class="heroTitle">POKÉBUST</h1>
 					<p class="heroBodyText">
-						Explore, Compare, and Timeline Your Favourite Pokemon!
+						Explore, Compare, and Timeline Your Favourite Pokémon!
 					</p>
 				</div>
 			</div>

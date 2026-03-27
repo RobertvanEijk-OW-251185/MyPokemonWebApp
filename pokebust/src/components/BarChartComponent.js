@@ -100,7 +100,7 @@ function BarChart() {
 				width: "100%",
 				margin: "0 auto",
 			}}>
-			<p className="descriptionTextTitle">PokeStats</p>
+			<p className="descriptionTextTitle">PokéStats</p>
 			<div style={{ height: "400px" }}>
 				<Bar data={data} options={options} />
 			</div>

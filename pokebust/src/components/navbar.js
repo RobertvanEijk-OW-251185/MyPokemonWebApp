@@ -18,7 +18,7 @@ function NavBar() {
 					<Nav className="me-auto">
 						<Navbar.Brand class="navTitle" href="#home">
 							<div class="navbarLogoImage" />
-							POKEBUST
+							PoKéBuSt
 						</Navbar.Brand>
 					</Nav>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -46,7 +46,7 @@ const options = {
 function TimeLineChart() {
 	return (
 		<div className="timelineChartSelf">
-			<p className="descriptionTextTitle">PokeStats</p>
+			<p className="descriptionTextTitle">Poké Stats</p>
 			<div style={{ height: "400px" }}>
 				<Line data={data} options={options} />
 			</div>

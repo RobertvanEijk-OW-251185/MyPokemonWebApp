@@ -189,7 +189,7 @@ function PokeGrid() {
 					style={!pokeBallVisible ? { display: "flex" } : {}}>
 					{pokemon1?.pokeDexDescription ? (
 						<>
-							<p className="descriptionTextTitle">POKEDATA</p>
+							<p className="descriptionTextTitle">Poké Data</p>
 							<p className="descriptionText">Name</p>
 							<p className="descriptionText">{pokemon1.name}</p>
 							<p className="descriptionText">Pokedex Description</p>
@@ -225,7 +225,7 @@ function PokeGrid() {
 					style={!pokeBallVisible ? { display: "flex" } : {}}>
 					{pokemon2?.pokeDexDescription ? (
 						<>
-							<p className="descriptionTextTitle">POKEDATA</p>
+							<p className="descriptionTextTitle">Poké Data</p>
 							<p className="descriptionText">Name</p>
 							<p className="descriptionText">{pokemon2.name}</p>
 							<p className="descriptionText">Pokedex Description</p>

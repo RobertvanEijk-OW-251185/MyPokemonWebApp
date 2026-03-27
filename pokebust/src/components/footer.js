@@ -43,7 +43,7 @@ function FooterComponent() {
 				</div>
 				<div class="footerInfo">
 					<div class="footerInfoTitle">
-						<h4>PokeAPI</h4>
+						<h4>PokéAPI</h4>
 					</div>
 					<div class="footerInfoContent">
 						<p>

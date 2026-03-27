@@ -78,7 +78,7 @@ const config = {
 function RadarChart() {
 	return (
 		<div style={{ width: "100%", maxWidth: "800px", margin: "0 auto" }}>
-			<p className="descriptionTextTitle">PokeStats</p>
+			<p className="descriptionTextTitle">Poké Stats</p>
 			<Radar data={data} />
 		</div>
 	);

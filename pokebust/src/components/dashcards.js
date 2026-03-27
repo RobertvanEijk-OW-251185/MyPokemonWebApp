@@ -8,17 +8,17 @@ function DashCards() {
 		<div class="dashCards">
 			<div class="card1">
 				<div class="cardInfo">
-					<h1 class="cardTitle">What is Pokebust</h1>
+					<h1 class="cardTitle">What is Pokébust</h1>
 					<p class="cardBodyCopy">
-						Discover PokeBust — your ultimate Pokémon stats hub! Explore base
+						Discover PokéBust — your ultimate Pokémon stats hub! Explore base
 						stats, compare favourites, and watch how strength grows over levels
-						— all powered by PokeAPI.
+						— all powered by PokéAPI.
 					</p>
 				</div>
 			</div>
 			<div class="card2">
 				<div class="cardInfo">
-					<h1 class="cardTitle">Unsure of Your Pokemon Info??</h1>
+					<h1 class="cardTitle">Unsure of Your Pokémon Info??</h1>
 					<p class="cardBodyCopy">
 						Quickly search any Pokémon and get instant stats, types, Pokédex
 						info, and locations. Never guess again, explore!
@@ -49,7 +49,7 @@ function DashCards() {
 			</div>
 			<div class="card4">
 				<div class="cardInfo">
-					<h1 class="cardTitle">View Your Poke-Timeline!!</h1>
+					<h1 class="cardTitle">View Your Poké-Timeline!!</h1>
 					<p class="cardBodyCopy">
 						Watch your Pokémon’s power grow level by level! Follow the timeline
 						of HP, Attack, Speed and more as it evolves and hits new peaks.

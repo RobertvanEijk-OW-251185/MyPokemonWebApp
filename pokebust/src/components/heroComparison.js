@@ -6,7 +6,7 @@ function HeroComponentComparison() {
 				<div class="heroText">
 					<h1 class="heroTitle">COMPARE</h1>
 					<p class="heroBodyText">
-						Compare data and visualise the information on two of you Pokemon!!
+						Compare data and visualise the information on two of you Pokémon!!
 					</p>
 				</div>
 			</div>
