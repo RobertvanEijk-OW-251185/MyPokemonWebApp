@@ -329,7 +329,6 @@
 
 .radarChartContainer,
 .barChartsContainer,
-.barChartsContainer,
 .pieChartContainer1,
 .pieChartContainer2 {
 	display: none;
@@ -373,6 +372,17 @@
 
 	grid-row: 3 / span 1;
 	grid-column: 2 / span 1;
+}
+
+.compareBarCharts {
+	display: flex;
+	flex-direction: column;
+
+	justify-content: space-between;
+	align-items: center;
+
+	margin-top: 0 !important;
+	/* gap: 4rem; */
 }
 
 .pieChartContainer1 {
@@ -424,4 +434,20 @@
 		0 4px 34px 5px #000;
 
 	background: url(../images/pokeBall.png) 50% / cover no-repeat;
+}
+
+/* Type Icons in General Boxes */
+
+.typeIconRow {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	justify-content: center;
+	margin: 4px 0;
+}
+
+.typeIcon {
+	width: 36px;
+	height: 36px;
+	object-fit: contain;
 }

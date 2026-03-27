@@ -45,7 +45,8 @@ import CompareButton from "./CompareButton.js";
 // Chart Imports
 import RadarChart from "./RadarChartComponent.js";
 import BarChart from "./BarChartComponent.js";
-import DoughnutChart from "./DoughnutChartComponent.js";
+import DoughnutChart1 from "./DoughnutChartComponent1.js";
+import DoughnutChart2 from "./DoughnutChartComponent2.js";
 
 function PokeGrid() {
 	const [search1, setSearch1] = useState("");
@@ -90,6 +91,9 @@ function PokeGrid() {
 			image: raw.sprites.other["official-artwork"].front_default,
 			pokeDexDescription: description,
 			weaknesses: weaknesses,
+			stats: raw.stats,
+			types: raw.types.map((t) => t.type.name),
+			captureRate: speciesData.capture_rate,
 		};
 	};
 
@@ -126,6 +130,11 @@ function PokeGrid() {
 		}
 
 		setIsLoading(false);
+
+		if (result1.status === "fulfilled")
+			console.log("Pokemon 1:", result1.value);
+		if (result2.status === "fulfilled")
+			console.log("Pokemon 2:", result2.value);
 	};
 
 	return (
@@ -171,7 +180,7 @@ function PokeGrid() {
 				<div
 					className="radarChartContainer"
 					style={!pokeBallVisible ? { display: "flex" } : {}}>
-					<RadarChart></RadarChart>
+					<RadarChart pokemon1={pokemon1} pokemon2={pokemon2}></RadarChart>
 				</div>
 
 				{/* Comparison Horisontal Bars */}
@@ -179,7 +188,7 @@ function PokeGrid() {
 				<div
 					className="barChartsContainer"
 					style={!pokeBallVisible ? { display: "flex" } : {}}>
-					<BarChart></BarChart>
+					<BarChart pokemon1={pokemon1} pokemon2={pokemon2}></BarChart>
 				</div>
 
 				{/* Pokeball To see Which Pokemon is "Better" */}
@@ -191,11 +200,39 @@ function PokeGrid() {
 						<>
 							<p className="descriptionTextTitle">Poké Data</p>
 							<p className="descriptionText">Name</p>
-							<p className="descriptionText">{pokemon1.name}</p>
-							<p className="descriptionText">Pokedex Description</p>
+							<p className="descriptionText">
+								{pokemon1.name.charAt(0).toUpperCase() + pokemon1.name.slice(1)}
+							</p>
+							<p className="descriptionText">PokéDex Description</p>
 							<p className="descriptionText">{pokemon1.pokeDexDescription}</p>
+							<p className="descriptionText">Types</p>
+							<p className="descriptionText">{pokemon1.types.join(", ")}</p>
+							{/* <div className="typeIconRow">
+								{pokemon1.types.map((type) => (
+									<img
+										key={type}
+										src={`https://raw.githubusercontent.com/duiker101/pokemon-type-svg-icons/master/icons/${type}.svg`}
+										alt={type}
+										title={type}
+										className="typeIcon"
+									/>
+								))}
+							</div> */}
 							<p className="descriptionText">Weaknesses</p>
-							<p className="descriptionText">{pokemon1.weaknesses}</p>
+							<p className="descriptionText">
+								{pokemon1.weaknesses.join(", ")}
+							</p>
+							{/* <div className="typeIconRow">
+								{pokemon1.weaknesses.map((weakness) => (
+									<img
+										key={weakness}
+										src={`https://raw.githubusercontent.com/duiker101/pokemon-type-svg-icons/master/icons/${weakness}.svg`}
+										alt={weakness}
+										title={weakness}
+										className="typeIcon"
+									/>
+								))}
+							</div> */}
 						</>
 					) : null}
 				</div>
@@ -205,7 +242,7 @@ function PokeGrid() {
 				<div
 					className="pieChartContainer1"
 					style={!pokeBallVisible ? { display: "flex" } : {}}>
-					<DoughnutChart></DoughnutChart>
+					<DoughnutChart1 pokemon={pokemon1}></DoughnutChart1>
 				</div>
 
 				{/* Pokeball 2 OR Sprite 2 */}
@@ -227,11 +264,39 @@ function PokeGrid() {
 						<>
 							<p className="descriptionTextTitle">Poké Data</p>
 							<p className="descriptionText">Name</p>
-							<p className="descriptionText">{pokemon2.name}</p>
-							<p className="descriptionText">Pokedex Description</p>
+							<p className="descriptionText">
+								{pokemon2.name.charAt(0).toUpperCase() + pokemon2.name.slice(1)}
+							</p>
+							<p className="descriptionText">PokéDex Description</p>
 							<p className="descriptionText">{pokemon2.pokeDexDescription}</p>
+							<p className="descriptionText">Types</p>
+							<p className="descriptionText">{pokemon2.types.join(", ")}</p>
+							{/* <div className="typeIconRow">
+								{pokemon2.types.map((type) => (
+									<img
+										key={type}
+										src={`https://raw.githubusercontent.com/duiker101/pokemon-type-svg-icons/master/icons/${type}.svg`}
+										alt={type}
+										title={type}
+										className="typeIcon"
+									/>
+								))}
+							</div> */}
 							<p className="descriptionText">Weaknesses</p>
-							<p className="descriptionText">{pokemon2.weaknesses}</p>
+							<p className="descriptionText">
+								{pokemon2.weaknesses.join(", ")}
+							</p>
+							{/* <div className="typeIconRow">
+								{pokemon2.weaknesses.map((weakness) => (
+									<img
+										key={weakness}
+										src={`https://raw.githubusercontent.com/duiker101/pokemon-type-svg-icons/master/icons/${weakness}.svg`}
+										alt={weakness}
+										title={weakness}
+										className="typeIcon"
+									/>
+								))}
+							</div> */}
 						</>
 					) : null}
 				</div>
@@ -242,7 +307,7 @@ function PokeGrid() {
 						!pokeBallVisible ? {} : { display: "none", boxShadow: "none" }
 					}>
 					<p className="descriptionTextTitle">Who should you choose??</p>
-					<div className="pokeBall3"></div>
+					<button className="pokeBall3"></button>
 				</div>
 
 				{/* Pie Cahrt Indicating Types for Pokemon 2 */}
@@ -250,7 +315,7 @@ function PokeGrid() {
 				<div
 					className="pieChartContainer2"
 					style={!pokeBallVisible ? { display: "flex" } : {}}>
-					<DoughnutChart></DoughnutChart>
+					<DoughnutChart2 pokemon={pokemon2}></DoughnutChart2>
 				</div>
 			</div>
 		</div>
