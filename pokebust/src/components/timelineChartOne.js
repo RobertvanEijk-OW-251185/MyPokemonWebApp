@@ -30,7 +30,7 @@ const data = {
 			data: [65, 59, 80, 81, 56, 55],
 			borderColor: "rgb(255, 99, 132)",
 			backgroundColor: "rgba(255, 99, 132, 0.2)",
-			tension: 0.3, // ← curve smoothness, 0 = straight lines
+			tension: 0.3, // - curve smoothness, 0 = straight lines
 		},
 	],
 };

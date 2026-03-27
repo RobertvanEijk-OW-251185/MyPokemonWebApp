@@ -1,6 +1,6 @@
 import "../componentStyling/timeline.css";
 
-export const SearchBarTimeline = ({ value, onChange }) => {
+export const SearchBarTimeline = ({ value, onChange, onSearch, isLoading }) => {
 	return (
 		<div className="input-wrapper-timeline">
 			<input
@@ -8,6 +8,8 @@ export const SearchBarTimeline = ({ value, onChange }) => {
 				placeholder="Search..."
 				value={value}
 				onChange={onChange}
+				onKeyDown={(e) => e.key === "Enter" && onSearch()}
+				disabled={isLoading}
 			/>
 		</div>
 	);
