@@ -9,8 +9,11 @@
 .grid {
 	display: grid;
 	/* width: 74.8rem; */
+	max-width: 100%;
 	/* height: 36.1875rem; */
+	height: auto;
 	height: fit-content;
+	margin-bottom: 3rem;
 	/* padding: 1.25rem 2.5rem; */
 
 	margin-left: auto;
@@ -18,7 +21,7 @@
 
 	row-gap: 2.5rem;
 	column-gap: 2.5rem;
-	grid-template-rows: repeat(4, fit-content(100%));
+	grid-template-rows: repeat(2, fit-content(100%));
 	grid-template-columns: repeat(3, fit-content(100%));
 }
 
@@ -141,7 +144,8 @@
 }
 
 .comparebtn {
-	width: 18.3125rem;
+	/* width: 18.3125rem; */
+	width: auto;
 	height: 4.0625rem;
 	aspect-ratio: 9/2;
 	grid-row: 2 / span 1;
@@ -163,7 +167,8 @@
 
 .compareNow {
 	display: flex;
-	width: 17.25rem;
+	/* width: 17.25rem; */
+	width: fill;
 	height: 3.4375rem;
 	padding: 1.3125rem 1.25rem;
 	/* margin-left: auto;
@@ -293,6 +298,9 @@
 .descriptionTextTitle {
 	margin-top: 1rem;
 
+	margin-left: auto;
+	margin-right: auto;
+
 	display: flex;
 	/* max-width: 19.21738rem; */
 	width: fit-content;
@@ -323,5 +331,97 @@
 .barChartsContainer,
 .barChartsContainer,
 .pieChartContainer1,
+.pieChartContainer2 {
+	display: none;
+	/* display: flex; */
+	justify-content: center;
+	align-items: center;
+	/* width: 24.1875rem; */
+	max-width: 24.1875rem;
+
+	width: fill;
+	height: fit-content;
+	padding: 2rem;
+	flex-direction: column;
+	align-items: left;
+	gap: 0.625rem;
+	align-self: stretch;
+	/* grid-row: 3 / span 1;
+	grid-column: 1 / span 1; */
+	justify-self: center;
+
+	border-radius: 3.125rem;
+	background: #202129;
+	box-shadow: 0 4px 34px 5px rgba(0, 0, 0, 0.64);
+}
+
+.radarChartContainer {
+	display: none;
+	max-width: 24.1875rem;
+	/* width: stretch; */
+	height: auto;
+
+	grid-row: 2 / span 1;
+	grid-column: 2 / span 1;
+}
+
+.barChartsContainer {
+	display: none;
+	max-width: 24.1875rem;
+	/* width: stretch; */
+	height: auto;
+
+	grid-row: 3 / span 1;
+	grid-column: 2 / span 1;
+}
+
 .pieChartContainer1 {
+	display: none;
+	max-width: 24.1875rem;
+	/* width: stretch; */
+	height: auto;
+
+	grid-row: 4 / span 1;
+	grid-column: 1 / span 1;
+}
+
+.pieChartContainer2 {
+	display: none;
+	max-width: 24.1875rem;
+	/* width: stretch; */
+	height: auto;
+
+	grid-row: 4 / span 1;
+	grid-column: 3 / span 1;
+}
+
+.pokeBallVersus {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	height: auto;
+	/* max-width: 80%; */
+	aspect-ratio: 1/1;
+	grid-row: 4 / span 1;
+	grid-column: 2 / span 1;
+}
+
+.pokeBall3 {
+	height: auto;
+	width: 80%;
+	aspect-ratio: 1/1;
+	justify-self: stretch;
+
+	grid-row: 4 / span 1;
+	grid-column: 2 / span 1;
+
+	border-radius: 11.9375rem;
+	/* background: #fff; */
+	box-shadow:
+		0 0 30px 15px rgba(0, 0, 0, 0.6) inset,
+		0 4px 34px 5px #000;
+
+	background: url(../images/pokeBall.png) 50% / cover no-repeat;
 }

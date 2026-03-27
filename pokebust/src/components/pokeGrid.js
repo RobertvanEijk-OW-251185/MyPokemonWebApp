@@ -42,6 +42,11 @@ import { SearchBar } from "./searchComponentComparison.js";
 import { SearchBar2 } from "./searchComponentComparison2.js";
 import CompareButton from "./CompareButton.js";
 
+// Chart Imports
+import RadarChart from "./RadarChartComponent.js";
+import BarChart from "./BarChartComponent.js";
+import DoughnutChart from "./DoughnutChartComponent.js";
+
 function PokeGrid() {
 	const [search1, setSearch1] = useState("");
 	const [search2, setSearch2] = useState("");
@@ -125,7 +130,14 @@ function PokeGrid() {
 
 	return (
 		<div className="gridContent">
-			<div className="grid">
+			<div
+				className="grid"
+				// style={
+				// 	!pokeBallVisible
+				// 		? { "grid-template-columns": "repeat(3, fit-content(100%))" }
+				// 		: {}
+				// }
+			>
 				<SearchBar
 					value={search1}
 					onChange={(e) => setSearch1(e.target.value)}
@@ -158,13 +170,17 @@ function PokeGrid() {
 
 				<div
 					className="radarChartContainer"
-					style={!pokeBallVisible ? { background: "flex" } : {}}></div>
+					style={!pokeBallVisible ? { display: "flex" } : {}}>
+					<RadarChart></RadarChart>
+				</div>
 
 				{/* Comparison Horisontal Bars */}
 
 				<div
 					className="barChartsContainer"
-					style={!pokeBallVisible ? { background: "flex" } : {}}></div>
+					style={!pokeBallVisible ? { display: "flex" } : {}}>
+					<BarChart></BarChart>
+				</div>
 
 				{/* Pokeball To see Which Pokemon is "Better" */}
 
@@ -188,7 +204,9 @@ function PokeGrid() {
 
 				<div
 					className="pieChartContainer1"
-					style={!pokeBallVisible ? { background: "flex" } : {}}></div>
+					style={!pokeBallVisible ? { display: "flex" } : {}}>
+					<DoughnutChart></DoughnutChart>
+				</div>
 
 				{/* Pokeball 2 OR Sprite 2 */}
 				<div
@@ -218,11 +236,22 @@ function PokeGrid() {
 					) : null}
 				</div>
 
+				<div
+					className="pokeBallVersus"
+					style={
+						!pokeBallVisible ? {} : { display: "none", boxShadow: "none" }
+					}>
+					<p className="descriptionTextTitle">Who should you choose??</p>
+					<div className="pokeBall3"></div>
+				</div>
+
 				{/* Pie Cahrt Indicating Types for Pokemon 2 */}
 
 				<div
-					className="pieChartContainer1"
-					style={!pokeBallVisible ? { background: "flex" } : {}}></div>
+					className="pieChartContainer2"
+					style={!pokeBallVisible ? { display: "flex" } : {}}>
+					<DoughnutChart></DoughnutChart>
+				</div>
 			</div>
 		</div>
 	);

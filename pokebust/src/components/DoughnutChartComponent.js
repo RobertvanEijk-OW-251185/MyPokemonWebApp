@@ -8,6 +8,11 @@
 // :::: tabs
 // ::: tab Doughnut
 
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import { Doughnut } from "react-chartjs-2";
+
+ChartJS.register(ArcElement, Tooltip, Legend);
+
 // <block:setup:1>
 const data = {
 	labels: ["Red", "Blue", "Yellow"],
@@ -33,7 +38,18 @@ const config = {
 };
 // </block:config>
 
-module.exports = {
-	actions: [],
-	config: config,
-};
+// module.exports = {
+// 	actions: [],
+// 	config: config,
+// };
+
+function DoughnutChart() {
+	return (
+		<div style={{ width: "100%", maxWidth: "800px", margin: "0 auto" }}>
+			<p className="descriptionTextTitle">Catch Rates</p>
+			<Doughnut data={data} />
+		</div>
+	);
+}
+
+export default DoughnutChart;

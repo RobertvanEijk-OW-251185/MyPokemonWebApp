@@ -6,6 +6,8 @@ import "./componentStyling/navbar.css";
 import "./componentStyling/hero.css";
 import "./componentStyling/dashcards.css";
 import "./componentStyling/footer.css";
+import "./componentStyling/timeline.css";
+
 // Import Components
 import NavBar from "./components/navbar.js";
 import HeroComponent from "./components/hero.js";
