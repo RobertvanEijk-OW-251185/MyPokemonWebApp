@@ -16,6 +16,8 @@ function TimelineNav({
 	isLoading,
 	selectedStat,
 	onStatSelect,
+	pokemon,
+	error,
 }) {
 	return (
 		<div className="timelineNavigationSection">
@@ -24,6 +26,17 @@ function TimelineNav({
 				onChange={onSearchChange}
 				onSearch={onSearch}
 				isLoading={isLoading}></SearchBarTimeline>
+
+			{/* Error Message */}
+			{error && <p className="pokeError">{error}</p>}
+
+			{/* Sprite Loading */}
+			{pokemon && (
+				<div className="timelinePokemonPreview">
+					<img src={pokemon.sprites.front_default} alt={pokemon.name}></img>
+				</div>
+			)}
+
 			<div className="navElements">
 				{/* <button className="navButton">Health</button>
 				<button className="navButton">Attack</button>

@@ -9,7 +9,8 @@
 .timelineContent {
 	display: flex;
 	width: 80rem;
-	height: 55.90438rem;
+	/* height: 55.90438rem; */
+	margin-bottom: 5rem;
 	padding: 0.625rem 2.5rem;
 	flex-direction: column;
 	align-items: flex-start;

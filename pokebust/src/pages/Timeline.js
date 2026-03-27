@@ -18,9 +18,29 @@ function Timeline() {
 	const handleSearch = async () => {
 		if (!search.trim()) return;
 		setIsLoading(true);
+		setError(null);
+		setPokemon(null);
 
 		// API CALL COMES HERE (DO LATER)
 		console.log("Searching for: ", search);
+
+		// API Call:
+
+		try {
+			const res = await fetch(
+				`https://pokeapi.co/api/v2/pokemon/${search.toLowerCase().trim()}`,
+			);
+
+			if (!res.ok) throw new Error("Not Found...");
+			const data = await res.json();
+			setPokemon(data);
+		} catch {
+			setError("Pokémon Not Found :(");
+		} finally {
+			setIsLoading(false);
+		}
+
+		// End of search handling
 
 		setIsLoading(false);
 	};
@@ -35,10 +55,15 @@ function Timeline() {
 					onSearch={handleSearch}
 					isLoading={isLoading}
 					selectedStat={selectedStat}
-					onStatSelect={setSelectedStat}></TimelineNav>
+					onStatSelect={setSelectedStat}
+					pokemon={pokemon}
+					error={error}></TimelineNav>
 
 				<div className="timelineChartSection">
-					<TimelineChart></TimelineChart>
+					<TimelineChart
+						pokemon={pokemon}
+						selectedStat={selectedStat}
+						isLoading={isLoading}></TimelineChart>
 				</div>
 			</div>
 			<FooterComponent></FooterComponent>

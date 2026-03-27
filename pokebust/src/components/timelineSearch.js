@@ -5,7 +5,7 @@ export const SearchBarTimeline = ({ value, onChange, onSearch, isLoading }) => {
 		<div className="input-wrapper-timeline">
 			<input
 				className="searchFieldTimeline"
-				placeholder="Search..."
+				placeholder="Search and Press Enter"
 				value={value}
 				onChange={onChange}
 				onKeyDown={(e) => e.key === "Enter" && onSearch()}
