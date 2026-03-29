@@ -451,3 +451,18 @@
 	height: 36px;
 	object-fit: contain;
 }
+
+/* Versus Winning Pokemon styling */
+
+.versusResult {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 12px;
+}
+
+.versusWinnerSprite {
+	max-width: 15rem;
+	max-height: 15rem;
+	object-fit: contain;
+}

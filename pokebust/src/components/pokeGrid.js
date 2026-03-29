@@ -102,11 +102,16 @@ function PokeGrid() {
 	const [isLoading, setIsLoading] = useState(false); // For loading state
 
 	const handleCompare = async () => {
+		setWinner(null);
+		setVersusButtonVisible(true);
 		setIsLoading(true); // Sets loading state to true, while fetching/comparing the information
 		setButtonMoved(true);
 		// Reset errors
 		setError1(null);
 		setError2(null);
+
+		const versusButton = document.querySelector(".pokeBall3");
+		if (versusButton) versusButton.style.display = "";
 
 		// Fetch both searched pokemon at the same time
 		const [result1, result2] = await Promise.allSettled([
@@ -135,6 +140,54 @@ function PokeGrid() {
 			console.log("Pokemon 1:", result1.value);
 		if (result2.status === "fulfilled")
 			console.log("Pokemon 2:", result2.value);
+	};
+
+	const [winner, setWinner] = useState(null);
+
+	const calcOverallScore = (pokemon) => {
+		const stats = pokemon.stats;
+
+		const getStat = (name) =>
+			// stats.find((stat) => stat.stat.name === name)?.base_stat ?? 0;
+			stats.find((s) => s.stat.name === name)?.base_stat ?? 0;
+
+		const hp = (getStat("hp") / 255) * 100;
+		const attack = (getStat("attack") / 255) * 100;
+		const defense = (getStat("defense") / 255) * 100;
+		const speed = (getStat("speed") / 255) * 100;
+		const spAtk = (getStat("special-attack") / 255) * 100;
+		const spDef = (getStat("special-defense") / 255) * 100;
+
+		return ((hp + attack + defense + speed + spAtk + spDef) / 600) * 100;
+	};
+
+	const [versusButtonVisible, setVersusButtonVisible] = useState(true);
+
+	const handleVersus = () => {
+		if (!pokemon1 || !pokemon2) return;
+
+		const score1 = calcOverallScore(pokemon1);
+		const score2 = calcOverallScore(pokemon2);
+
+		console.log(score1);
+		console.log(score2);
+
+		setVersusButtonVisible(false);
+
+		if (score1 > score2) {
+			setWinner({ pokemon: pokemon1, score: score1.toFixed(2) });
+			console.log(score1);
+			return console.log("Pokemon1 wins");
+		} else if (score1 < score2) {
+			setWinner({ pokemon: pokemon2, score: score2.toFixed(2) });
+			console.log(score1);
+			return console.log("Pokemon2 wins");
+		} else if (score1 == score2) {
+			setWinner({ pokemon: null, score: null });
+			console.log(score1);
+			console.log(score2);
+			return console.log("It's a tie");
+		}
 	};
 
 	return (
@@ -215,8 +268,9 @@ function PokeGrid() {
 										alt={type}
 										title={type}
 										className="typeIcon"
-									/>
+									></img>
 								))}
+								<p className="descriptionText">{pokemon1.types.join(", ")}</p>
 							</div> */}
 							<p className="descriptionText">Weaknesses</p>
 							<p className="descriptionText">
@@ -232,6 +286,9 @@ function PokeGrid() {
 										className="typeIcon"
 									/>
 								))}
+								<p className="descriptionText">
+									{pokemon1.weaknesses.join(", ")}
+								</p>
 							</div> */}
 						</>
 					) : null}
@@ -271,6 +328,7 @@ function PokeGrid() {
 							<p className="descriptionText">{pokemon2.pokeDexDescription}</p>
 							<p className="descriptionText">Types</p>
 							<p className="descriptionText">{pokemon2.types.join(", ")}</p>
+
 							{/* <div className="typeIconRow">
 								{pokemon2.types.map((type) => (
 									<img
@@ -281,6 +339,7 @@ function PokeGrid() {
 										className="typeIcon"
 									/>
 								))}
+								<p className="descriptionText">{pokemon2.types.join(", ")}</p>
 							</div> */}
 							<p className="descriptionText">Weaknesses</p>
 							<p className="descriptionText">
@@ -307,7 +366,38 @@ function PokeGrid() {
 						!pokeBallVisible ? {} : { display: "none", boxShadow: "none" }
 					}>
 					<p className="descriptionTextTitle">Who should you choose??</p>
-					<button className="pokeBall3"></button>
+					<button
+						className="pokeBall3"
+						onClick={(e) => {
+							e.currentTarget.style.display = "none";
+							handleVersus();
+						}}></button>
+
+					{/* Versus Change */}
+
+					{/* {winner && (
+						<button className="pokeBall3" onClick={handleVersus}></button>
+					)} */}
+
+					{winner &&
+						(winner.pokemon ? (
+							<div className="versusResult">
+								<img
+									src={winner.pokemon.image}
+									alt={winner.pokemon.name}
+									className="versusWinnerSprite"
+								/>
+								<p className="descriptionTextTitle">
+									{winner.pokemon.name.charAt(0).toUpperCase() +
+										winner.pokemon.name.slice(1)}
+								</p>
+								<p className="descriptionText">
+									Overall Score: {winner.score}%
+								</p>
+							</div>
+						) : (
+							<p className="descriptionText">It's a tie!</p>
+						))}
 				</div>
 
 				{/* Pie Cahrt Indicating Types for Pokemon 2 */}
