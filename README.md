@@ -1,8 +1,8 @@
 # MyPokemonWebApp
-A Data Comparison and Visualisation React Based WebApp centred around Pokémon with the use of the PokeAPI.
+![BannerImage](pokebust/GitHubImages/GithubBannerImage.png)
 
 # About Pokebust
-xxxxxxxxxxxxxxxxxxxxxx
+A Data Comparison and Visualisation React-based Web App centred around Pokémon with the use of the PokeAPI.
 
 ### Built With
 [![Javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://www.javascript.com/)
@@ -11,13 +11,18 @@ xxxxxxxxxxxxxxxxxxxxxx
 [![ChartJS](https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white)](https://www.chartjs.org/)
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
 
-![Pokébust Screenshot](githublink)
+![Pokébust Screenshot](pokebust/GitHubImages/ScreenShotDashboard.png)
 
 ## How To Install
 
 To get started, clone the repo:
 ```
-git clone https://github.com/JugheadStudio/Pokemon-API.git
+git clone https://github.com/RobertvanEijk-OW-251185/MyPokemonWebApp.git
+```
+
+Change Directory:
+```
+cd pokebust
 ```
 
 Install all the dependencies using npm:
@@ -34,17 +39,17 @@ npm start
 
 | Home Page | Compare Page | Timeline Page |
 | :--- | :--- | :--- |
-| Pokemon details overview | Compare Pokemon Details | Pokemon details overview |
-| Pokemon base Stats in a bar chart | Compare Pokemon base stats | Pokemon evolution chain |
-| Pokemon base EV values in a radar chart | Compare pokemon base EV values | Pokemon growth rate |
-| Pokemon weakness table | Compare Pokemon total base stats |  |
-| Pokemon growth rate |  |  |
+| Basic Explanation of Pokébust | Search for two Pokémon | Search for a specific Pokémon |
+| Basic Explanation of Comparison Page | Compare the searched Pokémon's base stats | View searched Pokémons stat growth over time |
+| Basic Explanation of Timeline Page | Base Stats on Radar Chart and Bar charts |  |
+|  | View catch rates of searched Pokémon on Doughnut Charts |  |
 
 ## The Idea
 xxxxxxxxx
 
 ## Wireframes
-![Wireframe](githublink)
+![WireframeLowFi](pokebust/GitHubImages/LowFidelity.png)
+![WireframeHighFi](pokebust/GitHubImages/HighFidelity.png)
 
 ## Development Process
 xxx
@@ -59,7 +64,8 @@ xxx
 xxx
 
 ## Mockups
-xxx
+![Mockup1](pokebust/GitHubImages/Mockup1.png)
+![Mockup2](pokebust/GitHubImages/Mockup2.png)
 
 ## Demonstration
 xxx
