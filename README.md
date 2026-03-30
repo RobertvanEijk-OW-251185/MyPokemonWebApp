@@ -70,21 +70,5 @@ Several features could meaningfully extend Pokébust in the future. A search aut
 ## Demonstration
 xxx
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Not sure where to start?
+Try searching for any of the following Pokémon: Pikachu, Charizard, Mewtwo, Mew, Dragonite, Eevee, Magikarp, or Metagross.
