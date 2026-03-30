@@ -13,7 +13,18 @@ Pokébust is a React-based web application that allows Pokémon fans and trainer
 
 ![Pokébust Screenshot](pokebust/GitHubImages/ScreenShotDashboard.png)
 
-## How To Install
+## About the PokeAPI:
+
+Pokébust makes use of the PokéAPI, a free, open, and consumption-only RESTful API that provides a comprehensive dataset covering all mainline Pokémon games. No authentication or API key is required to use it, and all endpoints return data in JSON format. The PokéAPI was the ideal choice for this project due to its extensive and well-documented dataset, its reliability, and the fact that it covers everything from base stats and species data to type relationships and capture rates. All data displayed in Pokébust is fetched live from the PokéAPI at the time of each search, meaning no data is hardcoded or stored locally. Below you will find the specific endpoints I ended up using for this project.
+
+| Endpoint | URL | Used for |
+| :--- | :--- | :--- |
+| Pokémon | https://pokeapi.co/api/v2/pokemon/{name} | Base stats, sprite images, types |
+| Pokémon Species | https://pokeapi.co/api/v2/pokemon-species/{name} | Pokédex description, capture rate |
+| Type | https://pokeapi.co/api/v2/type/{name} | Type weakness calculations |
+
+
+## How To Install:
 
 To get started, clone the repo:
 ```
