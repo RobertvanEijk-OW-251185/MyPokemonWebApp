@@ -24,6 +24,10 @@ Pokébust makes use of the PokéAPI, a free, open, and consumption-only RESTful 
 | Type | https://pokeapi.co/api/v2/type/{name} | Type weakness calculations |
 
 
+## Entity Relationship Diagram (ERD)
+
+![ERD](pokebust/GitHubImages/ERD.png)
+
 ## How To Install:
 
 To get started, clone the repo:
